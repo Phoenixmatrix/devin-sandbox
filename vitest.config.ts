@@ -9,7 +9,14 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   test: {
-    environment: 'jsdom',
+    browser: {
+      enabled: true,
+      provider: 'playwright',
+      headless: true,
+      instances: [
+        { browser: 'chromium' }
+      ],
+    },
     globals: true,
     setupFiles: ['./test/setup.ts'],
   },
