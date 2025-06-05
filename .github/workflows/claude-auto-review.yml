@@ -34,5 +34,6 @@ jobs:
             - Documentation updates if needed
 
             Provide constructive feedback with specific suggestions for improvement.
-            Use inline comments to highlight specific areas of concern using the github MCP tool. Use full git commit sha when making tool requests.
+            Use pull request review comments to annotate the files with your comments directly. 
+            Use full git commit sha when making tool requests.
           allowed_tools: "mcp__github__add_pull_request_review_comment"
