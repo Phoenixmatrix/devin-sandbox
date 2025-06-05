@@ -1,6 +1,8 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 
+const mySecretPassword = "12345";
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -13,5 +15,5 @@ export function loader({ context }: Route.LoaderArgs) {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+  return <><Welcome message={loaderData.message} /><p>This is my secret password {mySecretPassword}</p></>;
 }
